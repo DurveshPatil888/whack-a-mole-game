@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Segoe UI", sans-serif;
+
+  text-align: center;
+}
+
+/*  .box img - mhanje jo box chya madhe img asel tyacha var lagu zal pahije */
+
+@keyframes pop {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.box img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  animation: pop 0.3s ease-in-out;
+}
+
+@keyframes flashAnim {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: lightgray;
+  }
+}
+
+.flash {
+  background-color: red !important;
+  animation: flashAnim 0.2sec;
+}
+
+.container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box.mole {
+  background-color: black;
+}
+.box {
+  width: 18vmin;
+  height: 18vmin;
+  /* border-radius: 1rem;
+  background-color: lightgray; */
+  pointer-events: auto;
+  background-color: #ddd; /* softer than lightgray */
+  border: 2px solid #aaa;
+  transition: background-color 0.3s;
+}
+
+.box:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.game {
+  width: 60vmin;
+  height: 60vmin;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7vmin;
+}
+
+.disabled {
+  pointer-events: none !important;
+  opacity: 0.6;
+}
+
+h1 {
+  color: #333;
+  margin-top: 0.2rem;
+  font-size: 3rem;
+}
+
+h2,
+h3 {
+  color: #555;
+  margin: 1rem 0;
+}
+
+.reset {
+  margin-top: 0.1rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  background-color: #31414d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset:hover {
+  background-color: #64a4d8;
+}
